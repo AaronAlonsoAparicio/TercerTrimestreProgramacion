@@ -41,27 +41,29 @@ public class Ejercicio1Personas {
 		e.printStackTrace();
 	}
 	
+	String lista;
 	if(Files.exists(rutaArchivoPath)) {
-			ArrayList<Persona> personas = new ArrayList();
+			ArrayList<String> personas = new ArrayList();
 		
-		personas.add(new Persona(1,"Aaron", "31247897H", "Alumno"));
-		personas.add(new Persona(2,"Julian","32443243J","Alumno"));
-		personas.add(new Persona(3,"Miguel","67565454K","Alumno"));
+		Persona persona1 = new Persona(1,"Aaron", "31247897H", "Alumno");
+		Persona persona2 = new Persona(2,"Julian","32443243J","Alumno");
+		Persona persona3 = new Persona(3,"Miguel","67565454K","Alumno");
 		
 		
 		
-		for (Persona persona : personas) {
-			String lista = persona.toCSV();
-			Files.write(rutaArchivoPath, lista);
-			
-			
-			
-			
+		personas.add(persona1.toCSV());
+		personas.add(persona2.toCSV());
+		personas.add(persona3.toCSV());
+		
+		
+		
+		try {
+			Files.write(rutaArchivoPath, personas);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
-	
-		
-	}
 		
 		
 		
@@ -73,4 +75,7 @@ public class Ejercicio1Personas {
 		
 	}
 
-}
+
+	
+	
+	}}

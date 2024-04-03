@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class Persona {
 
-	private int id;
-	private String nombre;
-	private String dni;
-	private String rol;
+	 int id;
+	 String nombre;
+	 String dni;
+	 String rol;
 
 	public Persona(int id, String nombre, String dni, String rol) {
 		super();
@@ -39,9 +39,7 @@ public class Persona {
 	}
 	
 	public String toCSV() {
-		return this.id+","+this.nombre+","+ this.dni+","+this.rol;
-		
-		
+	    return id + ", " + nombre + ", " + dni + ", " + rol;
 	}
 
 }
