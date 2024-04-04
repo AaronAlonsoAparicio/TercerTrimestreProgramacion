@@ -38,10 +38,12 @@ public class Ejercicio1Personas {
 			Persona persona2 = new Persona(2, "Julian", "32443243J", "Alumno");
 			Persona persona3 = new Persona(3, "Miguel", "67565454K", "Alumno");
 			Persona persona4 = new Persona(4, "Cristian", "54678094B", "Alumno");
+			
 
 			personasACsv(personas, persona1, persona2, persona3, persona4);
 
 			try {
+				
 				Files.write(rutaArchivoPath, personas);
 			} catch (IOException e) {
 				System.out.println("El archivo o directorio ya existe.");
