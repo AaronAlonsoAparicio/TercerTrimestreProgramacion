@@ -73,6 +73,7 @@ public class Ejercicio1Personas {
 		personas.add(persona4.toCSV());
 	}
 
+	
 	public static void crearDirectorio() {
 		Path directorio = Paths.get(NombreDirectorio);
 
